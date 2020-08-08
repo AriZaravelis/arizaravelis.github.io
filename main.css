@@ -18,7 +18,13 @@ p{
 	color:green;
 }
 
-div{
-	height: 50px;
-	width: 100px;
+.container {
+    width: 200px;
+    height: 120px;
+}
+
+
+.container img {
+    width: 100%;
+    height: auto;
 }
