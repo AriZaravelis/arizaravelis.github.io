@@ -17,15 +17,3 @@ p{
 	background:none;
 	color:green;
 }
-
-
-.container {
-    width: 200px;
-    height: 120px;
-}
-
-/* resize images */
-.container img {
-    width: 200%;
-    height: auto;
-}
