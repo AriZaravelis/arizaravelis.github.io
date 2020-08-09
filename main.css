@@ -18,7 +18,8 @@ p{
 	color:green;
 }
 
-.top bar{
+.topBar{
 	background:none;
 	color: blue;
+	margin-left: 40px;
 }
