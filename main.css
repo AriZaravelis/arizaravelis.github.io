@@ -9,8 +9,12 @@ body {
 }
 
 
-
 .topMenu {
 	background-color: #0b3c5d;
-	
+}
+
+
+.item {
+	text-align: center;
+	color: yellow;
 }
