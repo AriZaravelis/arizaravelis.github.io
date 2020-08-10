@@ -12,4 +12,6 @@ body {
 
 .topMenu {
 	background-color: #0b3c5d;
+	height: 100px;
+	width: 100%;
 }
