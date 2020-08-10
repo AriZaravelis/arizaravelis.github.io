@@ -15,6 +15,10 @@ body {
 
 
 .item {
+	white-space: normal;
+	padding: 10px 15px 9px 15px;
 	text-align: center;
-	color: yellow;
+	letter-spacing: 1px;
+	background-color: transparant;
+	color: #FFFF00;
 }
