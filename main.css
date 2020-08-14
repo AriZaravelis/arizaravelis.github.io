@@ -15,6 +15,13 @@ header {
 	background-color: #0b3c5d;
 }
 
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+
 .logo {
 	float: left;
 }
