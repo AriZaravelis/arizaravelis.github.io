@@ -29,3 +29,7 @@ header::after {
 .menuItems {
 	float: right;	
 }
+
+.menuItems ul {
+	margin: 0;
+}
