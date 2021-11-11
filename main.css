@@ -6,13 +6,22 @@ body {
 }
 
 
+
+
+/* Navigation Bar Work */
+
+
 .topMenu {
-	width: 80%;
-	margin: 0 auto;
+	width: 95%;
+	min-width: 1000px;
+	margin: 0;
 }
 
 header {
 	background-color: #0b3c5d;
+	width: 100%;
+	min-width: 1000px;
+	margin: 0;
 }
 
 header::after {
@@ -21,15 +30,385 @@ header::after {
 	clear: both;
 }
 
-
 .logo {
 	float: left;
+	width: 10%;
+	padding-top: 0%;
+	padding-bottom: 0%;	
+	margin-top: 0%;
+	margin-bottom: 0%;	
 }
 
 .menuItems {
-	float: right;	
+	float: right;
 }
 
 .menuItems ul {
 	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menuItems li {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 8%;
+	padding-bottom: 8%;
+
+	position: relative;
+}
+
+.menuItems ul li a {
+	color: #FFD700;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 130%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.menuItems ul li a:hover {
+	color: #000;
+}
+
+.menuItems ul li a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	background-color: #FFD700;
+	
+	position: absolute;
+	top: 0;
+	width: 0%;
+	
+	transition: all ease-in-out 250ms;
+}
+
+.menuItems ul li a:hover::before {
+	width: 100%;
+}
+
+
+.mainBox {
+	width: 70%;
+	min-width: 1000px;
+	height: 2000px;
+	margin: auto;
+	margin-top: 50px;
+	background-color: #fff;
+	border-radius: 10px;
+	border: 1px solid grey;
+}
+
+hr {
+	margin-top: 2%;
+	width: 70%;
+}
+
+
+/* Home Page Work */
+
+.contactMeBox {
+	height: 450px;
+	width: 25%;
+	background-color: #fff;
+	border-radius: 10px;
+	border: 1.5px solid black;
+	margin-left: 40px;
+	padding-top: 20px;
+	
+}
+
+.myPhoto {
+	height: auto;
+	width: 80%;
+	margin-left: 10%;
+}
+
+.mailIcon {
+	width: 15px;
+	height: 15px;
+}
+
+.phoneIcon {
+	width: 15px;
+	height: 15px;
+}
+
+.contactMeBox2 {
+	height: 50px;
+	width: 225px;
+	margin: auto;
+	margin-top: 40px;
+	background-color: #fff;
+	border-radius: 10px;
+	border: 1px solid black;
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	
+}
+
+
+
+.linkedInLogo {
+	height: 45px;
+	width: 45px;	
+}
+
+.linkedInLogoColored {
+	height: 45px;
+	width: 45px;
+}
+
+
+.gitHubLogo {
+  height: 50px;
+  width: 50px;
+}
+
+.gitHubLogoColored {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.youtubeLogo {
+	height: 50px;
+	width: 50px;
+	
+}
+
+.youtubeLogoColored {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.chessLogo {
+	height: 50px;
+	width: 50px;
+}
+
+.chessLogoColored {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.column {
+	float: right;
+	width: 25%;
+}
+
+.row::after {
+	content: "";
+	clear; both;
+	display: table;
+}
+
+
+
+.container {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+
+.aboutMe {
+	
+}
+
+
+
+
+
+/* Resume Page Work */
+
+
+.resume {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.resume hr {
+	width: 100%;
+}
+
+.downloadResume {
+	height: 40px;
+	width: 200px;
+
+}
+
+.education {
+	margin-left: 10%;
+	margin-top: 5%;
+}
+
+.hobbies {
+	margin-top: 5%;
+}
+
+.hobbyChess {
+	display: inline-block;
+	border: 1px solid black;  
+	width: 30%;
+	height: 350px;
+	margin-right: 25px;
+	border-radius: 5px;
+}
+
+.hobbyChessImage {
+	width: 250px;
+	height: 250px;
+}
+
+.hobbySoccer {
+	display: inline-block;
+	border: 1px solid black;  
+	width: 30%;
+	height: 350px;
+	margin-right: 25px;
+	border-radius: 5px;
+}
+
+.hobbySoccerImage {
+	width: 250px;
+	height: 250px;
+}
+
+.hobbyPhilosophy {
+	display: inline-block;
+	border: 1px solid black;  
+	width: 30%;
+	height: 350px;
+	border-radius: 5px;
+}
+
+.hobbyPhilosophyImage {
+	width: 250px;
+	height: 250px;
+}
+
+.hobbyMusic {
+	display: inline-block;
+	border: 1px solid black;  
+	width: 30%;
+	height: 350px;
+	margin-right: 25px;
+	margin-top: 25px;
+	border-radius: 5px;
+}
+
+.hobbyMusicImage {
+	width: 250px;
+	height: 250px;
+}
+
+.hobbyProgramming {
+	display: inline-block;
+	border: 1px solid black;  
+	width: 30%;
+	height: 350px;
+	margin-top: 25px;
+	border-radius: 5px;
+}
+
+.hobbyProgrammingImage {
+	width: 250px;
+	height: 250px;
+}
+
+.volunteerWork {
+	margin-left: 5%;
+	margin-top: 2%;
+}
+
+
+
+
+
+/* Notes Page Work */
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-left: 15%;
+}
+
+td {
+	text-align: center;
+}
+
+
+/* Game Work */
+
+.game{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    margin: auto;
+}
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position:relative;
+    top: 150px;
+}
+.animate{
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+#obstacle{
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 130px;
+    left: 500px;
+    animation: obstacle 1s infinite linear;
+}
+@keyframes obstacle{
+    0%{left: 500px}
+    100%{left: -20px}
+}
+.score{
+    text-align: center;
 }
