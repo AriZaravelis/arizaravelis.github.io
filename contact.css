@@ -1,0 +1,239 @@
+/* Navigation Bar Work */
+
+header {
+	width: 100%;
+	margin: 0;
+}
+
+.topMenu {
+	background-color: #0b3c5d;
+	position: fixed;
+	height: 78px;
+}
+
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.logo {
+	float: left;
+	width: 8%;
+	padding-top: 0;
+	padding-bottom: 0;	
+	margin-top: 0;
+	margin-bottom: 0;	
+}
+
+.menuItems ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menuItems li {
+	display: inline-block;
+    padding-top: 1.7%;
+	margin-left: 35px;
+	margin-right: 35px;
+	position: relative;
+	float: left;
+}
+
+
+.menuItems ul li a {
+	color: #FFD700;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 130%;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.menuItems ul li a:hover {
+	color: #ffffff;
+}
+
+.menuItems ul li a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	background-color: #FFD700;
+	
+	position: absolute;
+	top: 0;
+	width: 0%;
+	
+	transition: all ease-in-out 250ms;
+}
+
+.menuItems ul li a:hover::before {
+	width: 100%;
+}
+
+.menuItems .active {
+	color: #bab5b5;
+}
+
+
+/* Home Page Work */
+
+
+body {
+	margin: 0;
+	background-color: #eae3e3;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: 400;
+}
+
+.mainBox {
+	width: 70%;
+	min-width: 1000px;
+	min-height: 2000px;
+	margin: auto;
+	margin-top: 125px;
+	background-color: #fff;
+	border-radius: 10px;
+	border: 1px solid grey;
+}
+
+
+.contactMeBox {
+	height: 450px;
+	width: 25%;
+	background-color: #fff;
+	border-radius: 10px;
+	border: 0.5px solid black;
+	margin-left: 40px;
+	padding-top: 20px;
+}
+
+.myPhoto {
+	height: auto;
+	width: 80%;
+	margin-left: 10%;
+}
+
+.mailIcon {
+	width: 15px;
+	height: 15px;
+}
+
+.phoneIcon {
+	width: 15px;
+	height: 15px;
+}
+
+.contactMeBox2 {
+	height: 50px;
+	width: 225px;
+	margin: auto;
+	margin-top: 40px;
+	background-color: #fff;
+	border-radius: 10px;
+	border: 0.2px solid black;
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.linkedInLogo {
+	height: 45px;
+	width: 45px;	
+}
+
+.linkedInLogoColored {
+	height: 45px;
+	width: 45px;
+}
+
+.gitHubLogo {
+  height: 50px;
+  width: 50px;
+}
+
+.gitHubLogoColored {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.youtubeLogo {
+	height: 50px;
+	width: 50px;
+}
+
+.youtubeLogoColored {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.chessLogo {
+	height: 50px;
+	width: 50px;
+}
+
+.chessLogoColored {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.column {
+	float: right;
+	width: 25%;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.container {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+
+.aboutMe {
+	
+}
+
+
+body > hr {
+	margin-top: 2%;
+	width: 70%;
+	min-width: 1000px;
+}

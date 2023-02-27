@@ -1,0 +1,380 @@
+/* Navigation Bar Work */
+
+header {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	width: 100%;
+}
+
+.topMenu {
+	background-color: #0b3c5d;
+	position: fixed;
+	height: 78px;
+}
+
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.logo {
+	float: left;
+	width: 8%;
+	padding-top: 0;
+	padding-bottom: 0;	
+	margin-top: 0;
+	margin-bottom: 0;	
+}
+
+.menuItems ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menuItems li {
+	display: inline-block;
+    padding-top: 1.7%;
+	margin-left: 35px;
+	margin-right: 35px;
+	position: relative;
+	float: left;
+}
+
+.menuItems ul li a {
+	color: #FFD700;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 130%;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.menuItems ul li a:hover {
+	color: #ffffff;
+}
+
+.menuItems ul li a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	background-color: #FFD700;
+	
+	position: absolute;
+	top: 0;
+	width: 0%;
+	
+	transition: all ease-in-out 250ms;
+}
+
+.menuItems ul li a:hover::before {
+	width: 100%;
+}
+  
+.menuItems .active {
+	color: #bab5b5;
+}
+
+.progressContainer {
+	width: 100%;
+	margin-top: 78px;
+	height: 8px;
+	background-color: transparent;
+}
+  
+.progressBar {
+	height: 8px;
+	background-color: #9b891e;
+	width: 0%;
+}
+
+
+/* Resume Page Work */
+
+body {
+	margin: 0;
+	background-color: #eae3e3;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: 400;
+}
+
+.mainBox {
+	width: 70%;
+	min-width: 1000px;
+	min-height: 2000px;
+	margin: auto;
+	margin-top: 125px;
+	background-color: #fff;
+	border-radius: 10px;
+	border: 1px solid grey;
+}
+
+.resume {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.resume hr {
+	width: 100%;
+}
+
+.downloadResume {
+	height: 40px;
+	width: 200px;
+
+}
+
+
+/* Education Work */
+
+.education {
+	margin-left: 10%;
+}
+
+.education h3 {
+	margin: 0;
+}
+
+.education p {
+	margin: 0;
+}
+
+
+/* Technical Skills Work */
+
+figure {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: nowrap;
+	align-content: center;
+	align-items: flex-start;
+  }
+
+figure p {
+	position: absolute;
+	top: 75px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	font-family: "Archer-Book", Georgia, Serif;
+	color: #000;
+	font-size: 10px;
+	z-index: 100;
+	padding: 0px;
+	margin: 0px;
+}
+
+figure .bar {
+	display: table-cell;
+	vertical-align: top;
+	padding: 0px;
+	font-style: italic;
+	font-size: 11px;
+	text-align: center;
+	z-index: 300;
+}
+
+figure > div.programming .bar {
+	width: 5%;
+}
+
+.resume .skillsBlock .skillsRating {
+	float: left;
+	text-align: left;
+}
+
+.resume .skillsBlock .skillsRating ul {
+	padding: 0px;
+	margin: 20px 0 0 0;
+}
+
+.resume .skillsBlock .skillsRating ul li {
+	list-style-type: none;
+	text-align: right;
+	height: 17px;
+	font-style: italic;
+	font-family: Georgia;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+figure > div {
+	margin-top: 25px;
+	font-size: 12px;
+	position: relative;
+}
+
+figure > div .expert {
+	height: 98px;
+	width: 8px;
+	margin: 0 auto;
+	border: 0px;
+	text-align: center;
+	position: relative;
+	background: url("Images/graphSprite.png") 0px 0px no-repeat;
+}
+
+figure > div .advanced {
+	height: 98px;
+	width: 8px;
+	margin: 0 auto;
+	border: 0px;
+	text-align: center;
+	position: relative;
+	background: url("Images/graphSprite.png") -25px 0px no-repeat;
+}
+
+figure > div .intermediate {
+	height: 98px;
+	width: 8px;
+	margin: 0 auto;
+	border: 0px;
+	text-align: center;
+	position: relative;
+	background: url("Images/graphSprite.png") -50px 0px no-repeat;
+}
+
+figure > div .beginner {
+	height: 98px;
+	width: 8px;
+	margin: 0 auto;
+	border: 0px;
+	text-align: center;
+	position: relative;
+	background: url("Images/graphSprite.png") -75px 0px no-repeat;
+}
+
+figure .bar .graphHeader {
+	position: absolute;
+	top: 73px;
+	height: 18px;
+	left: 0px;
+	right: 0px;
+}
+
+figure > div.programming .bar .graphHeader {
+	background-color: #fd835e;
+	border-radius: 25px;
+}
+
+
+/* Hobbies and Interests Work*/
+
+.hobbies {
+	margin-top: 5%;
+}
+
+.hobbyChess {
+	display: inline-block;
+	border: 1px solid black;  
+	width: 30%;
+	height: 350px;
+	margin-right: 25px;
+	border-radius: 5px;
+}
+
+.hobbyChessImage {
+	width: 250px;
+	height: 250px;
+}
+
+.hobbySoccer {
+	display: inline-block;
+	border: 1px solid black;  
+	width: 30%;
+	height: 350px;
+	margin-right: 25px;
+	border-radius: 5px;
+}
+
+.hobbySoccerImage {
+	width: 250px;
+	height: 250px;
+}
+
+.hobbyPhilosophy {
+	display: inline-block;
+	border: 1px solid black;  
+	width: 30%;
+	height: 350px;
+	border-radius: 5px;
+}
+
+.hobbyPhilosophyImage {
+	width: 250px;
+	height: 250px;
+}
+
+.hobbyMusic {
+	display: inline-block;
+	border: 1px solid black;  
+	width: 30%;
+	height: 350px;
+	margin-right: 25px;
+	margin-top: 25px;
+	border-radius: 5px;
+}
+
+.hobbyMusicImage {
+	width: 250px;
+	height: 250px;
+}
+
+.hobbyProgramming {
+	display: inline-block;
+	border: 1px solid black;  
+	width: 30%;
+	height: 350px;
+	margin-top: 25px;
+	border-radius: 5px;
+}
+
+.hobbyProgrammingImage {
+	width: 250px;
+	height: 250px;
+}
+
+
+/* Experience Work */
+
+.experience {
+	margin-left: 5%;
+	margin-top: 2%;
+}
+
+.experience li { 
+	padding: 5px 0px; 
+}
+
+.experience p {
+	margin: 0;
+}
+
+
+/* Volunteer Work */
+
+.volunteerWork {
+	margin-left: 5%;
+	margin-top: 2%;
+	padding-bottom: 20px;
+}
+
+.volunteerWork li { 
+	padding: 5px 0px; 
+}
+
+.volunteerWork p {
+	margin: 0;
+}
+
+
+
+body > hr {
+	margin-top: 2%;
+	width: 70%;
+	min-width: 1000px;
+}

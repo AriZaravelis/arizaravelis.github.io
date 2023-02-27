@@ -1,0 +1,129 @@
+/* Navigation Bar Work */
+
+header {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	width: 100%;
+}
+
+.topMenu {
+	background-color: #0b3c5d;
+	position: fixed;
+	height: 78px;
+}
+
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.logo {
+	float: left;
+	width: 8%;
+	padding-top: 0;
+	padding-bottom: 0;	
+	margin-top: 0;
+	margin-bottom: 0;	
+}
+
+.menuItems ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menuItems li {
+	display: inline-block;
+    padding-top: 1.7%;
+	margin-left: 35px;
+	margin-right: 35px;
+	position: relative;
+	float: left;
+}
+
+.menuItems ul li a {
+	color: #FFD700;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 130%;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.menuItems ul li a:hover {
+	color: #ffffff;
+}
+
+.menuItems ul li a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	background-color: #FFD700;
+	
+	position: absolute;
+	top: 0;
+	width: 0%;
+	
+	transition: all ease-in-out 250ms;
+}
+
+.menuItems ul li a:hover::before {
+	width: 100%;
+}
+  
+.menuItems .active {
+	color: #bab5b5;
+}
+
+.progressContainer {
+	width: 100%;
+	margin-top: 78px;
+	height: 8px;
+	background-color: transparent;
+}
+  
+.progressBar {
+	height: 8px;
+	background-color: #9b891e;
+	width: 0%;
+}
+
+
+/* Notes Page Work */
+
+body {
+	margin: 0;
+	background-color: #eae3e3;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: 400;
+}
+
+.mainBox {
+	width: 70%;
+	min-width: 1000px;
+	min-height: 2000px;
+	margin: auto;
+	margin-top: 125px;
+	background-color: #fff;
+	border-radius: 10px;
+	border: 1px solid grey;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: 15%;
+  }
+  
+td {
+	text-align: center;
+}  
+
+body > hr {
+	margin-top: 2%;
+	width: 70%;
+	min-width: 1000px;
+}
