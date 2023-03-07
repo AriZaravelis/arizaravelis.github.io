@@ -7,10 +7,12 @@ header {
 	width: 100%;
 }
 
-.topMenu {
-	background-color: #0b3c5d;
-	position: fixed;
-	height: 78px;
+.nav {
+	background: #0b3c5d;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
 }
 
 header::after {
@@ -21,20 +23,20 @@ header::after {
 
 .logo {
 	float: left;
-	width: 8%;
+	width: 128px;
 	padding-top: 0;
 	padding-bottom: 0;	
 	margin-top: 0;
 	margin-bottom: 0;	
 }
 
-.menuItems ul {
+.nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.menuItems li {
+.nav ul li {
 	display: inline-block;
     padding-top: 1.7%;
 	margin-left: 35px;
@@ -43,7 +45,7 @@ header::after {
 	float: left;
 }
 
-.menuItems ul li a {
+.nav ul li a {
 	color: #FFD700;
 	font-family: "Times New Roman", Times, serif;
 	font-size: 130%;
@@ -53,29 +55,73 @@ header::after {
 	display: block;
 }
 
-.menuItems ul li a:hover {
+.nav ul li a:hover {
 	color: #ffffff;
 }
 
-.menuItems ul li a::before {
+.nav ul li a::before {
 	content: '';
 	display: block;
 	height: 5px;
 	background-color: #FFD700;
-	
 	position: absolute;
 	top: 0;
 	width: 0%;
-	
 	transition: all ease-in-out 250ms;
 }
 
-.menuItems ul li a:hover::before {
+.nav ul li a:hover::before {
 	width: 100%;
 }
-  
-.menuItems .active {
+
+.nav .active {
 	color: #bab5b5;
+}
+
+.checkbtn {
+	font-size: 30px;
+	color: #fff;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+#check {
+	display: none;
+}
+
+@media (max-width: 1033px) {
+	.checkbtn {
+		display: block;
+	}
+	.fas.fa-bars {
+		color: #FFD700;
+	}
+	.fas.fa-bars:hover {
+		color: rgb(255, 255, 255);
+	}
+	.nav ul {
+		position: fixed;
+		width: 100%;
+		background-color: #0b3c5d;
+		top: 80px;
+		left: 100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	.nav ul li {
+		display: contents;
+		line-height: 30px;
+	}
+	.nav ul li a::before {
+		background: none;
+		transition: none;
+	}
+	#check:checked ~ ul {
+		left: 0;
+	}
 }
 
 .progressContainer {
@@ -87,7 +133,7 @@ header::after {
   
 .progressBar {
 	height: 8px;
-	background-color: #9b891e;
+	background-color: #f07d3a;
 	width: 0%;
 }
 
@@ -160,17 +206,15 @@ header::after {
 /* Projects Page Work */
 
 html {
-	/* scroll-padding-top: 80px; */
 	scroll-padding-top: 120px;
+	scroll-behavior: smooth;
 }
 
 body {
 	margin: 0;
 	font-family: "Times New Roman", Times, serif;
 	font-weight: 400;
-	background-image: url(img/back.jpg);
-	/* background-repeat: repeat-x; */
-	/* background-size: 2000px; */
+	background-image: url(Images/ProjectImages/background.jpg);
 	background-attachment: fixed;
 }
 
@@ -364,6 +408,7 @@ body {
 .project2 object {
 	width: 100%;
 	height: 800px;
+	border: 2px solid black;
 }
 
 .project2 hr {
@@ -424,7 +469,6 @@ body {
 	position: relative;
 	width: 100%;
 	height: 700px;
-	/* border: 1px solid black; */
 }
 
 .project3 .container::before {

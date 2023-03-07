@@ -1,16 +1,16 @@
 /* Navigation Bar Work */
 
 header {
-	position: fixed;
-	z-index: 1;
-	top: 0;
 	width: 100%;
+	margin: 0;
 }
 
-.topMenu {
-	background-color: #0b3c5d;
-	position: fixed;
-	height: 78px;
+.nav {
+	background: #0b3c5d;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
 }
 
 header::after {
@@ -21,20 +21,20 @@ header::after {
 
 .logo {
 	float: left;
-	width: 8%;
+	width: 128px;
 	padding-top: 0;
 	padding-bottom: 0;	
 	margin-top: 0;
 	margin-bottom: 0;	
 }
 
-.menuItems ul {
+.nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.menuItems li {
+.nav ul li {
 	display: inline-block;
     padding-top: 1.7%;
 	margin-left: 35px;
@@ -43,7 +43,7 @@ header::after {
 	float: left;
 }
 
-.menuItems ul li a {
+.nav ul li a {
 	color: #FFD700;
 	font-family: "Times New Roman", Times, serif;
 	font-size: 130%;
@@ -53,77 +53,152 @@ header::after {
 	display: block;
 }
 
-.menuItems ul li a:hover {
+.nav ul li a:hover {
 	color: #ffffff;
 }
 
-.menuItems ul li a::before {
+.nav ul li a::before {
 	content: '';
 	display: block;
 	height: 5px;
 	background-color: #FFD700;
-	
 	position: absolute;
 	top: 0;
 	width: 0%;
-	
 	transition: all ease-in-out 250ms;
 }
 
-.menuItems ul li a:hover::before {
+.nav ul li a:hover::before {
 	width: 100%;
 }
-  
-.menuItems .active {
+
+.nav .active {
 	color: #bab5b5;
 }
 
-.progressContainer {
-	width: 100%;
-	margin-top: 78px;
-	height: 8px;
-	background-color: transparent;
+.checkbtn {
+	font-size: 30px;
+	color: #fff;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
 }
-  
-.progressBar {
-	height: 8px;
-	background-color: #9b891e;
-	width: 0%;
+
+#check {
+	display: none;
+}
+
+@media (max-width: 1033px) {
+	.checkbtn {
+		display: block;
+	}
+	.fas.fa-bars {
+		color: #FFD700;
+	}
+	.fas.fa-bars:hover {
+		color: rgb(255, 255, 255);
+	}
+	.nav ul {
+		position: fixed;
+		width: 100%;
+		background-color: #0b3c5d;
+		top: 80px;
+		left: 100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	.nav ul li {
+		display: contents;
+		line-height: 30px;
+	}
+	.nav ul li a::before {
+		background: none;
+		transition: none;
+	}
+	#check:checked ~ ul {
+		left: 0;
+	}
 }
 
 
-/* Notes Page Work */
+
+/* Restricted Notes Page Work */
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
 
 body {
-	margin: 0;
-	background-color: #eae3e3;
+    margin: 0;
+    background-color: #f2f2f2;
 	font-family: "Times New Roman", Times, serif;
 	font-weight: 400;
+    height: 100vh;
+    width: 100vw;
 }
 
-.mainBox {
-	width: 70%;
-	min-width: 1000px;
-	min-height: 2000px;
-	margin: auto;
-	margin-top: 125px;
-	background-color: #fff;
-	border-radius: 10px;
-	border: 1px solid grey;
+.protected {
+    background-color: #fff;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
+    border-radius: 3px;
+    width: 500px;
+    margin: 400px auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    margin-left: 15%;
-  }
-  
-td {
-	text-align: center;
-}  
+.protected__content {
+    padding: 24px 28px;
+}
 
-body > hr {
-	margin-top: 2%;
-	width: 70%;
-	min-width: 1000px;
+.protected__content__heading {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 12px;
+    line-height: 1;
+}
+
+.protected__alert {
+    display: none;
+    border-bottom: 1px solid transparent;
+    border-radius: 3px 3px 0 0;
+    padding: 12px 14px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.protected__content__input {
+    display: block;
+    border: solid 1px #ccc;
+    padding: 12px 14px;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
+    font-size: 16px;
+    width: 100%;
+    border-radius: 3px;
+    margin-bottom: 12px;
+}
+
+.protected__content__input:focus {
+    outline: none;
+    border-color: #228843;
+}
+
+.protected__content__btn {
+    background-color: #228843;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    padding: 12px 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 16p
+}
+
+.protected__content__btn:hover {
+    background-color: #1C6D36;
 }

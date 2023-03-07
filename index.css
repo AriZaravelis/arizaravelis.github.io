@@ -5,10 +5,12 @@ header {
 	margin: 0;
 }
 
-.topMenu {
-	background-color: #0b3c5d;
-	position: fixed;
-	z-index: 1;
+.nav {
+	background: #0b3c5d;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
 }
 
 header::after {
@@ -19,20 +21,20 @@ header::after {
 
 .logo {
 	float: left;
-	width: 8%;
+	width: 128px;
 	padding-top: 0;
 	padding-bottom: 0;	
 	margin-top: 0;
 	margin-bottom: 0;	
 }
 
-.menuItems ul {
+.nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.menuItems li {
+.nav ul li {
 	display: inline-block;
     padding-top: 1.7%;
 	margin-left: 35px;
@@ -42,7 +44,7 @@ header::after {
 }
 
 
-.menuItems ul li a {
+.nav ul li a {
 	color: #FFD700;
 	font-family: "Times New Roman", Times, serif;
 	font-size: 130%;
@@ -52,29 +54,73 @@ header::after {
 	display: block;
 }
 
-.menuItems ul li a:hover {
+.nav ul li a:hover {
 	color: #ffffff;
 }
 
-.menuItems ul li a::before {
+.nav ul li a::before {
 	content: '';
 	display: block;
 	height: 5px;
 	background-color: #FFD700;
-	
 	position: absolute;
 	top: 0;
 	width: 0%;
-	
 	transition: all ease-in-out 250ms;
 }
 
-.menuItems ul li a:hover::before {
+.nav ul li a:hover::before {
 	width: 100%;
 }
 
-.menuItems .active {
+.nav .active {
 	color: #bab5b5;
+}
+
+.checkbtn {
+	font-size: 30px;
+	color: #fff;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+#check {
+	display: none;
+}
+
+@media (max-width: 1033px) {
+	.checkbtn {
+		display: block;
+	}
+	.fas.fa-bars {
+		color: #FFD700;
+	}
+	.fas.fa-bars:hover {
+		color: rgb(255, 255, 255);
+	}
+	.nav ul {
+		position: fixed;
+		width: 100%;
+		background-color: #0b3c5d;
+		top: 80px;
+		left: 100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	.nav ul li {
+		display: contents;
+		line-height: 30px;
+	}
+	.nav ul li a::before {
+		background: none;
+		transition: none;
+	}
+	#check:checked ~ ul {
+		left: 0;
+	}
 }
 
 
@@ -97,7 +143,7 @@ body p {
 	height: 350px;
 	overflow: hidden;
 	position: relative;
-	margin-top: 75px;
+	margin-top: 78px;
 }
 
 .photo {
@@ -191,6 +237,6 @@ img:nth-child(4) {
 } 
 
 hr {
-	margin-top: 2%;
+	margin-top: 1%;
 	width: 70%;
 }
